@@ -10,7 +10,7 @@ const sideDrawer = props => {
 		<nav className ={drawerClasses}>
 			<ul>
 				<li>
-					<a href="/">Upload</a>
+					<a onClick={props.uploadClickHandler}>Upload</a>
 				</li>
 				<li>
 					<a href="/">Logout</a>

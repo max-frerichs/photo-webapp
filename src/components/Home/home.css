@@ -1,0 +1,7 @@
+.content {
+	position: relative;
+	top: 100px;
+	margin: 0 auto;
+	text-align: center;
+	transition: ease-in 0.2s;
+}
