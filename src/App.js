@@ -16,6 +16,7 @@ class App extends Component {
 			homeClicked: false,
 		};
 	}
+
 	drawerToggleClickHandler = () => {
 		this.setState((prevState) => {
 			return {sideDrawerOpen: !prevState.sideDrawerOpen};
@@ -34,7 +35,6 @@ class App extends Component {
 				sideDrawerOpen: false,
 			}
 		})
-		
 	}
 
 	homeClickedHandler = () => {
@@ -61,7 +61,7 @@ class App extends Component {
 		if(this.state.homeClicked) {
 			home = <Home />
 		}
-
+		//console.log(this.state);
     return (
       <div className="App" style={{height: '100%'}}>
 				<Toolbar drawerClickHandler={this.drawerToggleClickHandler} uploadClickHandler={this.uploadToggleClickHandler} homeClickHandler={this.homeClickedHandler}/>

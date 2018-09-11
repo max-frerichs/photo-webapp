@@ -1,17 +1,32 @@
 <?php
-// In PHP versions earlier than 4.1.0, $HTTP_POST_FILES should be used instead
-// of $_FILES.
-
-$uploaddir = '/home/mfr/public_html/Upload/upload/';
-$uploadfile = $uploaddir . basename($_FILES['upload']['name']);
-$printdir = '/~mfr/Upload/upload/';
-if (move_uploaded_file($_FILES['upload']['tmp_name'], $uploadfile)) {
-    echo "File is valid, and was successfully uploaded.\n";
-} else {
-    echo "Possible file upload attack!\n";
+//var_dump($_FILES);
+$uploaddir = '/home/mfr/public_html/photo-webapp/react-navigation/src/components/Upload/files/';
+$uploadfile = $_FILES['file'];
+//var_dump($uploadfile);
+foreach($uploadfile as $key => $value) {
+	$key. ": " . $value . "\n";
+	if($key === 'name') {
+		// echo "Filename detected";
+		$filename = $value;
+	}
+	if($key === 'tmp_name') {
+		// echo "File directory detected \n";
+		$filetmpname = $value;
+	}
 }
-echo "<pre>";
-print_r($_FILES) . "<br/>";
-echo "</pre>";
-echo "<a href='gallery.php'>Galerie</a>"
+
+// echo $filetmpdir . "\n";
+// echo $filename . "\n";
+
+$movetempfile = $uploaddir . basename($filetmpname);
+echo $movetempfile . "\n";
+
+if(move_uploaded_file($_FILES['file']['tmp_name'], $uploaddir . $_FILES['file']['name'])) {
+	echo "File stored successfully. Congratulations!"; 
+} else {
+	echo "File could not be moved. Please try again!";
+}
+
+
+
 ?>
