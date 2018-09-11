@@ -33,7 +33,7 @@ class Uploadform extends React.Component  {
 	}
 	
   fileUpload(file){
-    const url = 'http://localhost/~mfr/files/upload.php';
+    const url = 'http://192.168.115.119/~mfr/files/upload.php';
     const formData = new FormData();
     formData.append('file',file)
     const config = {

@@ -3,13 +3,16 @@ import './home.css';
 
 // var location = {window.location.pathname()};
 // console.log(location);
+for(var i=0; i <= 6; i++) {
+	console.log(i);
+}
 const home = props => (
 	<div className="content">
 		<div className="head-content">
 			<h1>Willkommen</h1>
 		</div>
 		<div className="main-content">
-			<img src="http://localhost/~mfr/files/006.jpg" width='320' height='240' alt="1" />
+			<img src="http://192.168.115.119/~mfr/files/005.jpg" width='320' height='240' alt="1" />
 		</div>
 	</div>
 )
