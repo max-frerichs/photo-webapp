@@ -8,7 +8,7 @@ const home = props => (
 			<h1>Willkommen</h1>
 		</div>
 		<div className="main-content">
-			<p>Halo i bims 1 homepage</p>
+			<img src="/home/mfr/public_html/photo-webapp/react-navigation/src/components/Upload/files/001.png" width='320' height='240' />
 		</div>
 	</div>
 )

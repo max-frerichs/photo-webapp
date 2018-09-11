@@ -19,8 +19,10 @@ class Uploadform extends React.Component  {
     e.preventDefault() // Stop form submit
     this.fileUpload(this.state.file).then((response)=>{
 			var dataresponse = response.data;
-			console.log(response.data);
-    })
+			console.log(dataresponse);
+			return dataresponse;
+		})
+		
 	}
 	
   onChange(e) {
