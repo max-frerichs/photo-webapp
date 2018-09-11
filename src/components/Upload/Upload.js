@@ -29,11 +29,11 @@ class Uploadform extends React.Component  {
 		this.setState({file:e.target.files[0]}); 
 		let uploadfile = {file:e.target.files[0]};
 		console.log(uploadfile);
-		//return uploadfile;
+		return uploadfile;
 	}
-
+	
   fileUpload(file){
-    const url = 'http://localhost/~mfr/photo-webapp/react-navigation/src/components/Upload/upload.php';
+    const url = 'http://localhost/~mfr/files/upload.php';
     const formData = new FormData();
     formData.append('file',file)
     const config = {
@@ -45,8 +45,7 @@ class Uploadform extends React.Component  {
     return post(url, formData,config)
   }
 //JavaScript-Code zum Upload einer Datei
-
-	render(uploaddata) {
+	render() {
 	return (
 	<div className="upload-form">
 		<p>Bitte wählen Sie eine Datei aus: </p>
@@ -59,6 +58,8 @@ class Uploadform extends React.Component  {
 				<input className="input-button" type="submit"/>
 				Upload
 				</label>
+				<p id="progress">I bims 1 balken</p>
+				
 			</form>
 	</div>
 	)}
