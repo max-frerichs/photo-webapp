@@ -6,6 +6,7 @@
 	background-color: rgb(15, 77, 211);
 	height: 56px;
 	z-index: 300;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .toolbar-navigation {

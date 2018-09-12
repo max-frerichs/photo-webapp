@@ -3,6 +3,7 @@ import '../SideDrawer/DrawerToggleButton';
 import './toolbar.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './home.svg';
+import { FiHome } from 'feather-icons';
 
 const toolbar = props => (
 	<header className="toolbar">

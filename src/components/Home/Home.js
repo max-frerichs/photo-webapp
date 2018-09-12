@@ -3,9 +3,7 @@ import './home.css';
 
 // var location = {window.location.pathname()};
 // console.log(location);
-for(var i=0; i <= 6; i++) {
-	console.log(i);
-}
+
 const home = props => (
 	<div className="content">
 		<div className="head-content">
