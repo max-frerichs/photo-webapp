@@ -5,7 +5,6 @@ import  { post } from 'axios';
 
 
 class Uploadform extends React.Component  {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -15,8 +14,8 @@ class Uploadform extends React.Component  {
     this.onFormSubmit = this.onFormSubmit.bind(this)
     this.onChange = this.onChange.bind(this)
     this.fileUpload = this.fileUpload.bind(this)
-  }
-
+	}
+	
 	onFormSubmit(e){
     e.preventDefault() // Stop form submit
     this.fileUpload(this.state.file).then((response)=>{
@@ -25,7 +24,7 @@ class Uploadform extends React.Component  {
 			return dataresponse;
 		})
 	}
-	
+
   onChange(e) {
 		this.setState({file:e.target.files[0]}); 
 		//let uploadfile = {file:e.target.files[0]};
@@ -34,10 +33,10 @@ class Uploadform extends React.Component  {
 		console.log(uploadfile);
 		return uploadfile;
 	}
+	
   fileUpload(file){
 		if(file === 0) {
 			alert("Bitte wählen Sie eine Datei aus!");
-			return false
 		}
     const url = 'http://192.168.115.119/~mfr/files/upload.php';
     const formData = new FormData();
@@ -80,13 +79,14 @@ class Uploadform extends React.Component  {
 				// }
 			// })
 		// }
+	
 	return (
 	<div className="upload-form">
 		<p>Bitte wählen Sie eine Datei aus.</p>
 			<div className="show-file">
 				<p className="file-name">Name: {filename}</p>
 				<p className="file-name">Größe: {filesize} {unit}</p>	
-				<p className="progress-bar">Fortschritt: {uploadprogress} %</p>
+				<p className="progress-bar" >Fortschritt: {uploadprogress} %</p>
 			</div>
 			<form className="uploadform" name="upfile" method="POST" encType="multipart/form-data" onSubmit={this.onFormSubmit} >
 				<label id="button-select">
@@ -97,8 +97,8 @@ class Uploadform extends React.Component  {
 				<input className="input-button" type="submit"/>
 				Upload
 				</label>
-				
 			</form>
+			
 	</div>
 	)}
 };

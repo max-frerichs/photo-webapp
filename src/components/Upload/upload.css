@@ -1,7 +1,7 @@
 .upload-form {
 	position: relative;
 	top: 80px;
-	background: rgb(232, 232, 233);
+	background: white;
 	border: 1px rgb(215, 215, 218) solid;
 	color: black;
 	margin: 0 auto;
@@ -11,9 +11,9 @@
 	padding: 10px;
 	font-size: 1.05em;
 	border-radius: 3px;
-	box-shadow: 1px 1px 1px grey;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
 .show-file {
 	position: relative;
 	margin: 0 auto;
@@ -26,7 +26,7 @@
 }
 
 .uploadform {
-	margin-top: 12px;
+	margin-top: 20px;
 }
 
 .input-button {
@@ -67,21 +67,18 @@ form {
 	display: inline-block;
 }
 
-#progress-bar {
+.progress-bar {
 	display: inherit;
 	background-color: white;
 	position: relative;
 	width: 240px;
-	height: 10px;
+	height: 16px;
 	padding: 2px 5px;
-	top: 10px;
+	top: 8px;
 	margin: 0 auto;
 	border: 1px inset #446;
 	border-radius: 5px;
 }
-
-
-
 
 @media (min-width: 768px) {
 	.upload-form {
