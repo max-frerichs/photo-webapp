@@ -5,6 +5,7 @@ import Backdrop from './components/Backdrop/Backdrop';
 import './App.css';
 import Upload from './components/Upload/Upload';
 import Home from './components/Home/Home'
+import { FiHome } from 'feather-icons';
 
 class App extends Component {
 	constructor(props) {
@@ -44,8 +45,7 @@ class App extends Component {
 				uploadOpen: false,
 				sideDrawerOpen: false
 			}
-		})
-		
+		})	
 	}
 
   render() {

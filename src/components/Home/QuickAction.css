@@ -1,0 +1,7 @@
+.quick-action {
+	position: absolute;
+	overflow: hidden;
+	background-color: black;
+	opacity: 0.5;
+	transform: scale(1.1);
+}

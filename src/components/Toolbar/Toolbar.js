@@ -12,7 +12,7 @@ const toolbar = props => (
 				<DrawerToggleButton click={props.drawerClickHandler} />
 			</div>
 			<div className="toolbar-logo">
-				<a onClick={props.homeClickHandler}>Home</a>
+				<a onClick={props.homeClickHandler}>Home </a>
 			</div>
 			<div className="spacer" />
 			<div className="toolbar-nav-items">
@@ -25,4 +25,4 @@ const toolbar = props => (
 	</header>	
 );
 
-export default toolbar;
+export default toolbar ;

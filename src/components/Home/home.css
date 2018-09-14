@@ -1,7 +1,7 @@
 .content {
 	font-family: Arial, Helvetica, sans-serif;
 	position: relative;
-	top: 100px;
+	top: 60px;
 	margin: 0 auto;
 	text-align: center;
 	transition: ease-in 0.2s;
@@ -11,7 +11,7 @@
 }
 
 #head {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 26px;
 }
 
@@ -20,13 +20,20 @@ img {
 	float: center;
 	padding: 6px;
 }
-img:hover {
-	transform: scale(1.1);
-	filter: blur(4px);
-}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @media (min-width: 768px) {
 	img {
 		float: left;
+	}
+	img:hover {
+		transform: scale(1.1);
+		filter: blur(4px);
+	}
+}@media (max-width: 768px) {
+	img:active {
+		transform: scale(1.1);
+		filter: blur(4px);
 	}
 }

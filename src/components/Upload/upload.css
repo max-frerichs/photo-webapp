@@ -3,11 +3,12 @@
 	top: 80px;
 	background: white;
 	border: 1px rgb(215, 215, 218) solid;
+	box-shadow: 0.5px 0.5px 0.5px 0px rgb(215, 215, 218);
 	color: black;
 	margin: 0 auto;
 	text-align: center;
 	width: 80%;
-	height: 200px;
+	height: 190px;
 	padding: 10px;
 	font-size: 1.05em;
 	border-radius: 3px;
@@ -26,7 +27,7 @@
 }
 
 .uploadform {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .input-button {
@@ -44,40 +45,36 @@ form {
 
 #button-select {
 	margin-right: 10px;
-	background-color: rgb(15, 77, 211);
+	background-color: rgb(138, 138, 138);
 	color: white;
-	border: 1px rgb(15, 77, 211) solid;
+	border: 1px rgb(138, 138, 138) solid;
 	border-radius: 3px;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 	font-size: 1.0em;
 	display: inline-block;
+	transition: transform 0.15s;
 }
 
 #button-upload {
-	background-color: rgb(15, 77, 211);
+	background-color: rgb(138, 138, 138);
 	color: white;
-	border: 1px rgb(15, 77, 211) solid;
+	border: 1px rgb(138, 138, 138) solid;
 	border-radius: 3px;
 	padding: 10px;
 	padding-left: 23px;
 	padding-right: 23px;
 	font-size: 1.0em;
 	display: inline-block;
+	transition: transform 0.15s;
 }
 
-.progress-bar {
-	display: inherit;
-	background-color: white;
-	position: relative;
-	width: 240px;
-	height: 16px;
-	padding: 2px 5px;
-	top: 8px;
-	margin: 0 auto;
-	border: 1px inset #446;
-	border-radius: 5px;
+#button-select:active {
+	transform: scale(0.98);
+}
+#button-upload:active {
+	transform: scale(0.98);
 }
 
 @media (min-width: 768px) {

@@ -23,6 +23,11 @@ class Uploadform extends React.Component  {
 			console.log(dataresponse);
 			return dataresponse;
 		})
+		this.setState((file) => {
+			return {
+				file: 0,
+			}
+		})
 	}
 
   onChange(e) {
@@ -82,7 +87,7 @@ class Uploadform extends React.Component  {
 	
 	return (
 	<div className="upload-form">
-		<p>Bitte wählen Sie eine Datei aus.</p>
+		<p>Datei-Upload</p>
 			<div className="show-file">
 				<p className="file-name">Name: {filename}</p>
 				<p className="file-name">Größe: {filesize} {unit}</p>	
@@ -97,8 +102,7 @@ class Uploadform extends React.Component  {
 				<input className="input-button" type="submit"/>
 				Upload
 				</label>
-			</form>
-			
+			</form>	
 	</div>
 	)}
 };
