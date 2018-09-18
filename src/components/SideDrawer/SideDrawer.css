@@ -10,11 +10,12 @@
 	max-width: 1920px;
 	z-index: 200;
 	transform: translateY(-100%);
-	transition: 0.15s ease-out; 
+	transition: ease-out 0.15s; 
 }
 
 .side-drawer.open {
-	transform: translateY(-40%)
+	transform: translateY(-40%);
+	/* transition: e */
 }
 
 .side-drawer ul {
@@ -30,6 +31,7 @@
 }
 
 .side-drawer a {
+	transition: ease-out 0.2s;
 	text-decoration: none;
 	color: white;
 }

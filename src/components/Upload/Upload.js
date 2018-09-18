@@ -3,7 +3,6 @@ import './upload.css';
 // import Icons from 'react-icons';
 import  { post } from 'axios';
 
-
 class Uploadform extends React.Component  {
   constructor(props) {
     super(props);

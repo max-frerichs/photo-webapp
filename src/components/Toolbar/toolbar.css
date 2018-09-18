@@ -17,6 +17,19 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+.feather-home{
+	padding-right: 3px;
+	color: white;
+	width: 24px;
+	height: 24px;
+}
+
+a {
+	width: 40px;
+	height: 20px;
+	color: white;
+}
+
 .toolbar-logo {
 	margin-left: 1rem;
 }

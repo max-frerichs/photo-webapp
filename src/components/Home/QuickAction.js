@@ -8,9 +8,6 @@ import './QuickAction.css';
 // 	);
 // }
 class QuickAction extends React.Component {
-	constructor(props) {
-		super(props)
-	}
 	
 	render() {
 		return (
