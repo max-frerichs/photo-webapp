@@ -4,7 +4,7 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import './App.css';
 import Upload from './components/Upload/Upload';
-import Home from './components/Home/Home'
+import Home from './components/Home/Home';
 
 
 class App extends Component {

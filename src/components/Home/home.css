@@ -20,6 +20,10 @@ img {
 	float: center;
 	padding: 6px;
 }
+.img-render {
+	width: 160px;
+	height: 120px;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -29,21 +33,11 @@ img {
 	}
 	img:hover {
 		transform: scale(1.1);
-		filter: blur(4px);
+		/* filter: blur(4px); */
 	}
 }@media (max-width: 768px) {
 	img:active {
 		transform: scale(1.1);
-		filter: blur(4px);
+		/* filter: blur(4px); */
 	}
-}
-a {
-
-}
-.feather-home{
-	padding-top: 3px;
-	padding-right: 3px;
-	color: white;
-	width: 24px;
-	height: 24px;
 }

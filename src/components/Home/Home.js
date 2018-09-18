@@ -4,16 +4,18 @@ import axios from 'axios';
 // var location = {window.location.pathname()};
 // console.log(location);
 // import QuickAction from './QuickAction';
+import HtmlToReact from 'html-to-react';
+
 
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			filedir: null,
+			filedir: 0,
 		}
 	}
 	componentDidMount() {
-		axios.post("http://192.168.115.119/~mfr/files/gallery.php")
+		axios.get("http://192.168.115.119/~mfr/files/gallery.php")
 		.then(response => {
 			var responseData = response.data;
 			// console.log(responseData);
@@ -25,25 +27,19 @@ class Home extends React.Component {
 			// console.log(this.state.filedir);
 		})
 	}
-	// QuickActionHandler = () => {
-		// this.setState((prevState) => {
-			// return{quickActionTriggered: !prevState.quickActionTriggered}
-		// })
-	// }
 	render () {
-		// if(this.state.quickActionTriggered) {
-			// quickaction = <QuickAction onClick={this.QuickActionHandler}/>
-		// }
-		var printfile = this.state.filedir;
-		var source = 'http://192.168.115.119/~mfr/files/upload/';
-		console.log(printfile);
+		var htmlInput = this.state.filedir
+		var htmlToReactParser = new HtmlToReact.Parser(React);
+		var reactComponent = htmlToReactParser.parse(htmlInput);
+;
+		// console.log(component);
 		return (
 			<div className="content">
 				<div className="head-content">
-					<p id="head">Willkommen</p>
+					<p id="head">Ihre Bilder: </p>
 				</div>
+				{reactComponent}
 				<div className="main-content">
-					<img src={source} width='160' height='120' alt="1" onClick={this.QuickActionHandler}/>
 				</div>
 			</div>
 		)
